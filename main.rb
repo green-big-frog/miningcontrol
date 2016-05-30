@@ -27,6 +27,8 @@ while 1 > 0 do
     paying = x['paying'].to_f
     hash = config[x['name']]
     earnings[x['algo']] = paying * hash
+    paying = 0
+    hash = 0
   end
 
   earnings.compact!
@@ -42,7 +44,7 @@ while 1 > 0 do
 
   unless previous_algo == algo
     system 'killall ccminer'
-    system "ccminer -a #{algo} --url stratum+tcp://#{algo}.eu.nicehash.com:#{port} -u #{address}.miningcontrol -p x"
+    system "ccminer -a #{algo} --url stratum+tcp://#{algo}.eu.nicehash.com:#{port} -u #{address}.miningcontrol -p x &"
   end
 
   sleep(60)
