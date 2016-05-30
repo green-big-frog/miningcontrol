@@ -45,6 +45,7 @@ while 1 > 0 do
   unless previous_algo == algo
     system 'killall ccminer'
     system "ccminer -a #{algo} --url stratum+tcp://#{algo}.eu.nicehash.com:#{port} -u #{address}.miningcontrol -p x &"
+    previous_algo = algo
   end
 
   sleep(60)
