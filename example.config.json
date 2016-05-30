@@ -1,4 +1,5 @@
 {
+    "_comment"  :    "Replace the Address below with your own address and the values are all in Mh/s",
     "address"   :    "19877NLDM6itpSeuFfTeuPZu4utpUPii49",
     "scrypt"    :    0.17,
     "sha256"    :    0,
