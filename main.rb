@@ -8,16 +8,16 @@ config = JSON.parse(file)
 
 address = config['address']
 
+algo = 0
+port = 0
+
+previous_algo = algo
+previous_port = port
+
 while 1 > 0 do
   url = 'https://www.nicehash.com/api?method=simplemultialgo.info'
   response = HTTParty.get(url)
   response = JSON.parse(response)
-
-  algo = 0
-  port = 0
-
-  previous_algo = algo
-  previous_port = port
 
   result = response["result"]["simplemultialgo"]
 
@@ -41,7 +41,7 @@ while 1 > 0 do
       port = x['port']
     end
   end
-
+binding.pry
   unless previous_algo == algo
     system 'killall ccminer'
     system "ccminer -a #{algo} --url stratum+tcp://#{algo}.eu.nicehash.com:#{port} -u #{address}.miningcontrol -p x &"
