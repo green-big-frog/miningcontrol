@@ -1,0 +1,23 @@
+{
+    "address"   :    "btc",
+    "scrypt"    :    1,
+    "sha256"    :    1,
+    "scryptnf"  :    1,
+    "x11"       :    1,
+    "x13"       :    1,
+    "keccak"    :    1,
+    "x15"       :    1,
+    "nist5"     :    1,
+    "neoscrypt" :    1,
+    "lyra2re"   :    1,
+    "whirlpoolx":    1,
+    "qubit"     :    1,
+    "quark"     :    1,
+    "axiom"     :    1,
+    "lyra2rev2" :    1,
+    "scryptjanenf16": 1,
+    "blake256r8":    1,
+    "blake256r14":   1,
+    "blake256r8vnl": 1,
+    "ethereum":      1
+}
