@@ -26,7 +26,7 @@ while 1 > 0 do
   result.each do |x|
     paying = x['paying'].to_f
     hash = config[x['name']]
-    earnings[x['algo']] = paying * hash
+    earnings[x['algo']] = paying.to_f * hash.to_f
     paying = 0
     hash = 0
   end
